@@ -18,6 +18,7 @@
   ],
   "ignore": [
     ".gitignore",
+    "bower.json",
     "index.html",
     "MIT-LICENSE.txt",
     "README.md"
