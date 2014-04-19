@@ -1,7 +1,7 @@
 {
   "name": "TextFinder.js",
   "main": "textfinder.js",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/Octane/TextFinder",
   "authors": [
     "Dmitry Korobkin <dmitry.korobkin@gmail.com>"
