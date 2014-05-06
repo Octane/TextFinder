@@ -1,20 +1,25 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>TextFinder</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TextFinder demo</title>
+	<link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
 	<div>
 		<h1><a href="https://github.com/Octane/TextFinder/">TextFinder</a></h1>
-		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		<p id="text">Lor<span>em        Ip</span>sum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem <span>     </span> Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including <span>versions of Lorem     </span>     Ipsum.</p>
+		<fieldset>
+			<legend>HTML</legend>
+			<div style="font-family: monospace; word-wrap: break-word;"><span style="background-color: #6abd45;">Lor&lt;span&gt;em      Ip&lt;/span&gt;sum</span> is simply dummy text of the printing and typesetting industry. <span style="background-color: #f26a4d;">Lorem Ipsum</span> has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing <span style="background-color: #fdb813;">Lorem &lt;span&gt;     &lt;/span&gt; Ipsum</span> passages, and more recently with desktop publishing software like Aldus PageMaker including &lt;span&gt;versions of <span style="background-color: #f287b7;">Lorem     &lt;/span&gt;      Ipsum</span>.</div>
+		</fieldset>
 	</div>
 	<script src="textfinder.js"></script>
 	<script>
 		new function () {
 
-			var finder = new TextFinder(document.body),
+			var finder = new TextFinder(document.querySelector("#text")),
 				mathes = finder.find("lorem ipsum"),
 				i = 0, length = mathes.length;
 
